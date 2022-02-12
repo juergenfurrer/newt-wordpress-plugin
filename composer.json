@@ -1,0 +1,19 @@
+{
+    "name": "infonique/newt",
+    "type": "wordpress-plugin",
+    "description": "Backend-Extension to manage the Newt-Access",
+    "authors": [
+        {
+            "name": "Juergen Furrer",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "chillerlan/php-qrcode": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Infonique\\Newt\\" : "src/"
+        }
+    }
+}
