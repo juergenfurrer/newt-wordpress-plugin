@@ -11,14 +11,10 @@
 
 require "vendor/autoload.php";
 
-use Infonique\Newt\Backend\Main;
+use Infonique\Newt\Backend\Settings;
 
-$main = new Main();
-
-add_action("the_content", function ($content) use ($main) {
-	$creator = $main->getCreatorName();
-	return $content .= "<p>Thank you for reading!</p><p>{$creator}</p>";
-});
+$settings = new Settings();
+$settings->admin_menu();
 
 /*
 $debug_tags = [];
