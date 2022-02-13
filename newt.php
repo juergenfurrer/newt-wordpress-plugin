@@ -13,10 +13,11 @@ require "vendor/autoload.php";
 
 use Infonique\Newt\Backend\Main;
 
-add_action("the_content", function ($content) {
-    $header = new Main();
-    $creator = $header->getCreatorName();
-    return $content .= "<p>Thank you for reading!</p><p>{$creator}</p>";
+$main = new Main();
+
+add_action("the_content", function ($content) use ($main) {
+	$creator = $main->getCreatorName();
+	return $content .= "<p>Thank you for reading!</p><p>{$creator}</p>";
 });
 
 /*
